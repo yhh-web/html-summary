@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>html总结</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<blockquote>
+<h1><strong><em>HTML总结</em></strong></h1>
+</blockquote>
+<hr />
+<p>说明：HTML是超文本标记语言（HyperText Markup Language）的缩写，我们用 HTML 来构建 Web 的网页。它定义了网页内容的含义和结构，在网页上点击鼠标右键-&gt;查看源代码就可看到HTML文档。</p>
+<blockquote>
+<blockquote>
+<h2>1、<strong>HTML常用元素</strong></h2>
+<pre><code>&lt;head&gt;,&lt;title&gt;,&lt;body&gt;,&lt;header&gt;,&lt;footer&gt;,
+&lt;p&gt;,&lt;div&gt;,&lt;audio&gt;,&lt;img&gt;等
+&lt;x&gt;为开始标签,&lt;/x&gt;为结束标签(注:x为元素),内容写在开始标签与结束标签之间。
+</code></pre>
+
+<p>区块元素：</p>
+<pre><code>&lt;h1&gt;,&lt;pre&gt;,&lt;ul&gt;,&lt;table&gt;,&lt;div&gt;等，其中pre标签适用于诗或其他一些特别格式的文本，区块元素在浏览器显示时，通常会以新行来开始和结束
+</code></pre>
+
+<p>内联元素：</p>
+<pre><code>&lt;span&gt;,&lt;input&gt;,&lt;td&gt;,&lt;a&gt;,&lt;img&gt;等，他们总是一个接一个进行显示，不会新起一行
+</code></pre>
+
+</blockquote>
+</blockquote>
+<hr />
+<blockquote>
+<blockquote>
+<h2>2、<strong>元素作用</strong></h2>
+<pre><code>&lt;!DOCTYPE html&gt;:声明文档类型，可有可无
+&lt;!--内容--&gt;:将内容注释掉，相当于对代码的分析
+（注:可用ctrl+/快捷进行注释）
+&lt;html&gt;&lt;/html&gt;:包裹整个页面，是根元素
+&lt;head&gt;&lt;/head&gt;:包含想在HTML中但是不显示在页面中的内容
+&lt;meta charest=&quot;utf-8&quot;&gt;:识别放在文本中的内容
+&lt;title&gt;&lt;/title&gt;:用来设置页面标题
+&lt;body&gt;&lt;/body&gt;:包含页面中看到的文本、图片、音频、游戏等等所有内容
+&lt;br&gt;,&lt;hr&gt;,&lt;input&gt;,&lt;img&gt;,&lt;a&gt;此类元素只有开始标签，作用为在该位置插入/嵌入某些东西
+</code></pre>
+
+</blockquote>
+</blockquote>
+<hr />
+<blockquote>
+<blockquote>
+<h2>3、<strong>元素的属性</strong></h2>
+<p>属性包含：</p>
+<pre><code>在属性和元素名称之间有一个空格。（如果已经有一个或多个属性，就与前一个属性之间有一个空格）
+属性名称后面跟着一个=号
+一个属性值由一对双引号“”引起来
+</code></pre>
+
+</blockquote>
+</blockquote>
+<hr />
+<blockquote>
+<blockquote>
+<h2>4、超链接及文件路径</h2>
+<p>格式为:</p>
+<pre><code>1、&lt;a href=URL     target=&quot;**&quot;&gt;xx&lt;/a&gt;
+  href:即将跳转的URL
+  target属性为**在新页面打开超链接
+2、&lt;img scr=URL alt=&quot;**&quot; wide=&quot;*&quot; height=&quot;*&quot;&gt;
+  scr:该属性为要显示图片的URL
+  alt：该属性为获取图片出现问题时显示的文字
+  高度和宽度可以指定，但图片容易变形
+</code></pre>
+
+<p>锚点:用于标记位置或元素    
+</p>
+<pre><code>元素的id值必须是唯一的，也即页面不能再有其它元素的id值为C4
+超链接中的地址需要有#符号
+</code></pre>
+
+</blockquote>
+</blockquote>
+<hr />
+<blockquote>
+<blockquote>
+<h2>5、表格（Table）</h2>
+<pre><code>&lt;table&gt;
+&lt;tr&gt;
+ &lt;th&gt;例子&lt;/th&gt;
+ &lt;th&gt;解释&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;&lt;imgsrc=&quot;picture.jpg&quot;&gt;&lt;/td&gt;
+&lt;td&gt;该图片文件与当前文档在同一目录中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&quot;./images/picture.jpg&quot;&gt;&lt;/td&gt;
+&lt;td&gt;该图片文件在当前目录下的images目录中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&quot;../picture.jpg&quot;&gt;&lt;/td&gt;
+&lt;td&gt;该图片文件在上一级目录中&lt;/td&gt;
+&lt;/tr&gt;
+</code></pre>
+
+<p></table>
+如：
+    <table>
+    <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+    </tr>
+    <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+    </tr>
+    <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+    </tr>
+    </table></p>
+<pre><code>&lt;table&gt;
+&lt;tr&gt;
+&lt;th&gt;Firstname&lt;/th&gt;
+&lt;th&gt;Lastname&lt;/th&gt;
+&lt;th&gt;Age&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Jill&lt;/td&gt;
+&lt;td&gt;Smith&lt;/td&gt;
+&lt;td&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Eve&lt;/td&gt;
+&lt;td&gt;Jackson&lt;/td&gt;
+&lt;td&gt;94&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+<blockquote>
+<pre><code>&lt;tr&gt;表示行，&lt;td&gt;表示行中的单元，&lt;th&gt;是表头的单元
+</code></pre>
+
+</blockquote>
+</blockquote>
+</blockquote>
+<hr />
+<blockquote>
+<blockquote>
+<h2>6、列表List</h2>
+<p>列表包括有序列表和无序列表</p>
+</blockquote>
+<p>无序列表：</p>
+<blockquote>
+<pre><code>&lt;ul type=&quot;square&quot;&gt;
+&lt;li&gt;Coffee&lt;/li&gt;
+&lt;li&gt;Tea&lt;/li&gt;
+&lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+</blockquote>
+</blockquote>
+<ul type="square">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul> 
+<blockquote>
+<blockquote>
+</blockquote>
+<p>有序列表：</p>
+<blockquote>
+<pre><code>&lt;ol type=&quot;a&quot;&gt;
+&lt;li&gt;Coffee&lt;/li&gt;
+&lt;li&gt;Tea&lt;/li&gt;
+&lt;li&gt;Milk&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+</blockquote>
+</blockquote>
+<ol type="a">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+<blockquote>
+<blockquote>
+<p>无序列表：标签是ul，默认使用实心圆点作为每项的标志，其它的标志可以是空心圆circle，实心方块square以及不出现标志。</p>
+<p>有序列表：标签是ol，默认使用数字作为每项的标志，其它的标志可以是大写字母A，小写字母a，罗马字母i等。</p>
+</blockquote>
+</blockquote>
+<hr />
+<blockquote>
+<blockquote>
+<h2>7、表单Form</h2>
+<form>
+    <!-- 文本框，注意有 placeholder 提示符 -->
+    用户名：<br>
+    <input type="text"   name="name" placeholder="请输入用户名"><br>
+    <!-- 密码框 -->
+    密码：<br>
+    <input type="password" name="ps" placeholder="请输入密码"><br>
+    年龄：<br>
+    <!-- 数字输入框，注意 min 和 value 属性-->
+    <input type="number" name="age" min="18" value="18"><br>
+    <!-- 单选按钮, 注意 checked 属性 -->
+    性别：<br>
+    <input type="radio" name="gender" value="male" checked> 男<br>
+    <input type="radio" name="gender" value="female"> 女<br>
+    <input type="radio" name="gender" value="other"> 其它<br>
+    <!-- 下拉列表，注意 selected 属性 -->
+    党派：<br>
+    <select name="party">
+    <option value="D">民主党</option>
+    <option value="R" selected>共和党</option>
+    <option value="N">无党派</option>
+    </select><br>
+    <!-- 多选框 -->
+    您有哪些交通工具：<br>
+    <input type="checkbox" name="vehicle1" value="Bike"> 自行车<br>
+    <input type="checkbox" name="vehicle2" value="Motocycle" checked> 摩托车<br>
+    <input type="checkbox" name="vehicle3" value="Car"> 轿车<br>
+    <input type="checkbox" name="vehicle4" value="Jet"> 飞机<br>
+    <!-- 日期选择器 -->
+    您的工作日期：<br>
+    <input type="date"><br>
+    <!-- 文件选择器 -->
+    上传您的照片:<br>
+    <input type="file" name="photo"><br>
+    <!-- 文本输入区域，注意 rows 和 cols 属性 -->
+    您的建议：<br>
+    <textarea name="message"    rows="5" cols="30">
+     The cat was playing in the garden.
+    </textarea><br><hr>
+    <!-- 表单提交/重置按钮，将表单中的数据取消或传输给服务器端进行处理 -->
+    <input type="submit" value="提 交">
+    <input type="reset" value="重 置">
+</form>
+<pre><code>当提交时，表单中没有name属性的元素将不会提交，比如上面工作日期的选择器。有name属性的元素其value的值将提交给服务器。
+</code></pre>
+
+</blockquote>
+</blockquote>
+<h3>网页内容通过在文本文件中添加标记符，可以告诉浏览器如何显示其中的内容，浏览器再根据标记符解释和显示其标记的内容，所以制作网页最重要的就是把符号元素的作用给记清楚，我制作阶段也遇到很多问题，但第一次弄还是收获很多，我发现编程的学习就是练习的学习，练的多了，接触的多了，遇到的问题就多了，同时解决的问题也就多了，那么你也就学通了，由于这次做作业距离最后一次讲课时间过了很长,所以写总结的时候还得重新复习HTML，用了两天的时间来简单学了下HTML，然后写下了此次总结，学习程序是一件很枯燥的事情，但坚持下去了就会从中收获快乐。</h3>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
